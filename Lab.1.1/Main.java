@@ -6,18 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        Person myPerson = new Person.Builder()
+       /* Person myPerson = new Person.Builder()
                 .withName(in.next())
-                .withHeight(in.nextDouble())
+                .withHeight(in.nextDouble())            <- проверка создания объекта Person с помощью шаблона Builder
                 .withAge(in.nextInt())
-                .build();
-        myPerson.printInfo();
+                .build();*/
+           new PersonTest().runTest();                    
+                myPerson.printInfo();
         new ClientTest().runTest();
         new EmployeeTest().runTest();
-        new PersonTest().runTest();
+       
         
-        //Person myPerson(Person.MAX_AGE+1, Person.MAX_HEIGHT+1, '', true) <- проверка для классического конструктора с обработкой Исключений
-
+        
     }
 
     private static class ClientTest {
@@ -36,11 +36,14 @@ public class Main {
 
     private static class PersonTest {
         public void runTest() {
-            Person myPerson = new Person.Builder()
+           /* Person myPerson = new Person.Builder()
                     .withName("Лёха")
-                    .withHeight(Person.MAX_HEIGHT+1)
+                    .withHeight(Person.MAX_HEIGHT+1)        <- проверка создания объекта Person с помощью шаблона Builder
                     .withAge(Person.MAX_AGE+1)
-                    .build();
+                    .build();*/
+                    
+           Person myPerson(Person.MAX_AGE+1, Person.MAX_HEIGHT+1, '', true) //<- проверка для классического конструктора с обработкой Исключений
+
         }
     }
 }
