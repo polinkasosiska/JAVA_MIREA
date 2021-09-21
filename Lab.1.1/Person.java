@@ -8,11 +8,11 @@ public class Person {
     public static final int MAX_AGE = 200;
     public static final double MAX_HEIGHT = 3.2F;
 
-    /*public Person(int age, double height, String name, boolean valid) {
+    public Person(int age, double height, String name, boolean valid) {
         this.age = age;
-        this.height = height;           <- Классический конструктор
+        this.height = height;           //<- Классический конструктор
         this.name = name;
-    }*/
+    }
 
     public void printInfo() {
         System.out.println(this);
@@ -50,7 +50,7 @@ public class Person {
         return "Person{" + "age=" + age + ", height=" + height + ", name='" + name + '\'' + '}';
     }
 
-    public static class Builder {
+   /* public static class Builder {
         private Person newPerson;
         public Builder(){
             newPerson = new Person();
@@ -59,7 +59,7 @@ public class Person {
             newPerson.age = age;
             return this;
         }
-        public Builder withHeight(double height){
+        public Builder withHeight(double height){               <- описание шаблона Builder - аналога классического конструктора
             newPerson.height = height;
             return this;
         }
@@ -70,6 +70,6 @@ public class Person {
         public Person build(){
             return newPerson;
         }
-    }
+    }*/
 }
 
