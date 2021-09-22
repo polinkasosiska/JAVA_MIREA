@@ -11,8 +11,7 @@ public class Main {
                 .withHeight(in.nextDouble())            <- проверка создания объекта Person с помощью шаблона Builder
                 .withAge(in.nextInt())
                 .build();*/
-           new PersonTest().runTest();                    
-                myPerson.printInfo();
+        new PersonTest().runTest(); 
         new ClientTest().runTest();
         new EmployeeTest().runTest();
        
@@ -42,7 +41,8 @@ public class Main {
                     .withAge(Person.MAX_AGE+1)
                     .build();*/
                     
-           Person myPerson(Person.MAX_AGE+1, Person.MAX_HEIGHT+1, '', true) //<- проверка для классического конструктора с обработкой Исключений
+            Person myPerson = new Person(Person.MAX_AGE+1, Person.MAX_HEIGHT+1, "", true); //<- проверка для классического конструктора с обработкой Исключений
+            myPerson.printInfo();
 
         }
     }
